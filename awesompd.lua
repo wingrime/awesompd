@@ -3,7 +3,6 @@
 -- @copyright 2010-2011 Alexander Yakushev 
 -- @release v1.0
 ---------------------------------------------------------------------------
-
 require('awesompd/utf8')
 require('awesompd/jamendo')
 local beautiful = require('beautiful')
@@ -710,8 +709,6 @@ function awesompd:update_track(file)
    end
 
    if not track_line or string.len(track_line) == 0 then
-      self.text = "Disconnected"
-      self.unique_text = self.text
       if self.connected then
 	 self:notify_disconnect()
 	 self.connected = false
